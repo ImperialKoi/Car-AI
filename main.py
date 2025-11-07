@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-from simple_ai_trainer import SimpleAITrainer
+from ai_trainer import SimpleAITrainer
 
 def initialize_pygame():
     pygame.init()

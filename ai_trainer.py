@@ -16,7 +16,7 @@ class SimpleAITrainer:
         self.screen_width = 1280
         self.screen_height = 720
         self.time_limits = {'early': 15, 'mid': 30, 'late': 60}
-        self.config_file = "train/neat_config_simple.txt"
+        self.config_file = "train/neat_config.txt"
         self.setup_checkpoints()
     
     def setup_checkpoints(self):
