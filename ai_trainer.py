@@ -5,7 +5,6 @@ import pickle
 import os
 import sys
 
-sys.path.append('..')
 from environment import Car
 
 class SimpleAITrainer:
@@ -16,7 +15,7 @@ class SimpleAITrainer:
         self.screen_width = 1280
         self.screen_height = 720
         self.time_limits = {'early': 15, 'mid': 30, 'late': 60}
-        self.config_file = "train/neat_config.txt"
+        self.config_file = "neat_config.txt"
         self.setup_checkpoints()
     
     def setup_checkpoints(self):
@@ -208,7 +207,7 @@ class SimpleAITrainer:
         try:
             winner = population.run(evaluate_generation, 50)
             if winner:
-                with open('train/best_simple_ai.pkl', 'wb') as f:
+                with open('best_simple_ai.pkl', 'wb') as f:
                     pickle.dump(winner, f)
             return winner
         except KeyboardInterrupt:
